@@ -1,0 +1,103 @@
+*{
+  padding: 0;
+  margin: 0;
+
+}
+/*style of the app */
+.App {
+  text-align: center;
+}
+
+
+
+
+/*style of the navigation bar*/
+/* style of theLogo */
+#ImageLogo{
+  width: 50px;
+  height:60px
+}
+
+.NavigationBar{
+ display:flex ;
+justify-content: space-between;
+  margin-inline: auto;
+}
+/* contenu de navigation */
+.NavigationBar__content{
+  display: flex;
+  gap: 20px;
+
+}
+/*texte de navigation bar*/
+.NavigationBar__content h3{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
+  padding-top: 25px;
+
+}
+/*size of images of the navigation bar*/
+#HomeLogo{
+  width: 30px;
+}
+/* button of searching*/
+.ButtonResearch{
+ background-color: none;
+ border: none;
+border-color: none;
+}
+.input_rechercher{
+  background-color: none;
+  border: none;
+  height: 20px;
+  padding-top: 25px;
+}
+
+/* movie Cards*/
+.MovieCard{
+  border-color: gray;
+border-style:hidden;
+padding-top: 30px;
+width: 250px;
+background-color:	#E8E8E8;
+
+}
+.MovieCard p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size:medium;
+text-align:center
+
+}
+.MovieCard h3{
+  padding-top: 20px;
+  font-family: cursive;
+  font-size:larger
+
+}
+.MovieCard img{
+  object-fit: cover;
+}
+.container{
+  display: flex;
+  padding-top: 30px;
+  padding: 60px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #F5F5F5;
+  justify-content: center;
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 20px;
+}
+.modal-body input::placeholder{
+  text-align: left;
+
+}
+.modal-body input{
+  text-align: center;
+
+}
