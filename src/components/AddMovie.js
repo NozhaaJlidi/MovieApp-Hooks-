@@ -1,89 +1,29 @@
 import React, { useState } from "react";
+import '../styles/addmovie.css'
 import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-const AddMovie = ({ addMovie }) => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const [newMovie, setNewMovie] = useState({
-    title: "",
-    description: "",
-    img: "",
-    rate: "",
-  });
-  const add = () => {
-  
-    addMovie(newMovie);
-    handleClose();
-    setNewMovie({
-        title: "",
-        description: "",
-        img: "",
-        rate: "",
-    })
-  }
-  return (
-    <>
-      <>
-        <Button variant="primary" onClick={handleShow}>
-          Add Movie
-        </Button>
 
-        <Modal
-          show={show}
-          onHide={handleClose}
-          backdrop="static"
-          keyboard={false}
-        >
-          <Modal.Header closeButton>
-            <Modal.Title>Add your movie here </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <div className="modal-body">
-              <input
-                type="text"
-                value={newMovie.title}
-                placeholder="title"
-                onChange={(e) =>
-                  setNewMovie({ ...newMovie, title: e.target.value })
-                }
-              ></input>
-              <input
-                type="text"
-                value={newMovie.description}
-                placeholder="description"
-                onChange={(e) =>
-                  setNewMovie({ ...newMovie, description: e.target.value })
-                }
-              ></input>
-              <input
-                type="text"
-                value={newMovie.img}
-                placeholder="image"
-                onChange={(e) =>
-                  setNewMovie({ ...newMovie, img: e.target.value })
-                }
-              ></input>
-              <input
-                type="text"
-                value={newMovie.rate}
-                placeholder="rate"
-                onChange={(e) =>
-                  setNewMovie({ ...newMovie, rate: e.target.value })
-                }
-              ></input>
-            </div>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button  variant="primary" onClick={add}>Save</Button>
-          </Modal.Footer>
-        </Modal>
-      </>
-    </>
-  );
+const AddMovie = ({setShowModal, setlistToMap,listToMap}) => {
+  const [newMovie, setNewMovie] = useState({});
+  
+  const handlechange = (e) => {
+     setNewMovie({...newMovie,[e.target.name] :e.target.value})
+  }
+  return(
+  <div className="modal-container">
+    <h1  onClick={()=>setShowModal(false)} id="close-btn">X</h1>
+    
+     <div className="formulaire">
+      <h3> Add Movie</h3>
+    <input onChange={(e)=>handlechange(e)} text="" name="title" placeholder="Movie Title"></input>
+    <input onChange={(e)=>handlechange(e)}text="" name="description"placeholder="Movie Description"></input>
+    <input onChange={(e)=>handlechange(e)} text="" name="img"placeholder="Movie Image"></input>
+    <input onChange={(e)=>handlechange(e)} text=""name="rate"placeholder="Movie Rate"></input>
+    <Button onClick={() => {setlistToMap([...listToMap,newMovie]);setShowModal(false)}  }variant="outline-secondary">
+        Save{" "}
+      </Button>{" "}
+    </div>
+  </div>)
+   
 };
 
 export default AddMovie;

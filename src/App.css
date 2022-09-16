@@ -1,8 +1,9 @@
-*{
+* {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+ }
 
-}
 /*style of the app */
 .App {
   text-align: center;
@@ -13,71 +14,83 @@
 
 /*style of the navigation bar*/
 /* style of theLogo */
-#ImageLogo{
-  width: 50px;
-  height:60px
+#ImageLogo {
+  width: 80px;
+  height: 60px;
+  padding-left: 40px;
 }
 
-.NavigationBar{
- display:flex ;
-justify-content: space-between;
+.NavigationBar {
+  display: flex;
+  justify-content: space-between;
   margin-inline: auto;
+
 }
+
 /* contenu de navigation */
-.NavigationBar__content{
+.NavigationBar__content {
   display: flex;
   gap: 20px;
 
 }
+
 /*texte de navigation bar*/
-.NavigationBar__content h3{
+.NavigationBar__content h3 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: small;
   padding-top: 25px;
 
 }
+
 /*size of images of the navigation bar*/
-#HomeLogo{
+#HomeLogo {
   width: 30px;
+
 }
+
 /* button of searching*/
-.ButtonResearch{
- background-color: none;
- border: none;
-border-color: none;
+.ButtonResearch {
+
+  border: none;
+  border-color: none;
+
+
 }
-.input_rechercher{
-  background-color: none;
+
+.input_rechercher {
+
   border: none;
   height: 20px;
   padding-top: 25px;
 }
 
 /* movie Cards*/
-.MovieCard{
+.MovieCard {
   border-color: gray;
-border-style:hidden;
-padding-top: 30px;
-width: 250px;
-background-color:	#E8E8E8;
+  border-style: hidden;
+  padding-top: 30px;
+  width: 250px;
+  background-color: #E8E8E8;
 
 }
-.MovieCard p{
+
+.MovieCard p {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size:medium;
-text-align:center
-
+  font-size: medium;
+  text-align: center
 }
-.MovieCard h3{
+
+.MovieCard h3 {
   padding-top: 20px;
   font-family: cursive;
-  font-size:larger
-
+  font-size: larger
 }
-.MovieCard img{
+
+.MovieCard img {
   object-fit: cover;
 }
-.container{
+
+.container {
   display: flex;
   padding-top: 30px;
   padding: 60px;
@@ -87,17 +100,46 @@ text-align:center
   justify-content: center;
 }
 
-.modal-body{
+.modal-body {
   display: flex;
   flex-direction: column;
   width: 100%;
   row-gap: 20px;
 }
-.modal-body input::placeholder{
+
+.modal-body input::placeholder {
   text-align: left;
 
 }
-.modal-body input{
+
+.modal-body input {
   text-align: center;
 
 }
+
+#SeeMore {
+  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+
+  align-items: center;
+}
+
+.NavigationBar input {
+  width: 150px;
+  height: 30px;
+  margin-top: 20px;
+  margin-right: 25px;
+  text-align: center;
+  box-shadow: 2px 2px 2px #7d7d7d4f;
+
+
+}
+/*styles of the description part*/
+
+link{
+  text-decoration: none;
+  text-decoration-color: black;
+
+}
+link:visited { text-decoration: none; }

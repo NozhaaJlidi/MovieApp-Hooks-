@@ -1,13 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import {Link} from "react-router-dom";
 
 
-const MovieCard = (props)=> {
+
+
+const MovieCard = ({x})=> {
   return (
     <div className="MovieCard">
-     <img src={props.x.img} alt="placeholder" />
-      <h3> {props.x.title}</h3>
-      <p>{props.x.description}</p>
+     <img src={x.img} alt="placeholder" />
+      <h3> {x.title}</h3>
+      <p>{x.description}</p>
+      <Link  to={`/description/${x.title}`} state={{ x }}>
+
+      <h6 id="SeeMore">  See More</h6></Link>
 
     </div>
   );

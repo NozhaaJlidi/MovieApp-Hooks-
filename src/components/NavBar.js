@@ -1,22 +1,23 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-const NavBar = (props) => {
+const NavBar = ({ setText }) => {
   return (
     <div className="NavigationBar">
       <img id="ImageLogo" src="./logo1.png" alt=""></img>
       <div className="NavigationBar__content">
         <img id="HomeLogo" src="./house-door.svg" alt=""></img>
-        <h3>HOME</h3>
+        <h3> <Link to="/">HOME</Link></h3>
         <img id="HomeLogo" src="./film.svg" alt=""></img>
-        <h3>MOVIES</h3>
+        <h3>   <Link to="/Movies">MOVIES</Link></h3>
         <img id="HomeLogo" src="./tv.svg" alt=""></img>
-        <h3>SERIES</h3>
+        <h3><Link to="/Movies">SERIES</Link></h3>
       </div>
 
-      <input onChange={(e) =>props.setText(e.target.value) } 
+      <input
         type="text"
-        
-        placeholder="Rechercher"
+        onChange={(e) => setText(e.target.value)}
+        placeholder="Search"
       ></input>
     </div>
   );
